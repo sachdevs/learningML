@@ -20,6 +20,39 @@
 - *prediction errors* difference between predicted vals and observed vals
 - *residual sum of squares* should be minimized:
   - aka mean of predict - y squared
+
 ```
 SS _res = sum(1, n, i, (y _i - f(x _i))^2)
 ```
+
+##Solving ordinary least squares for simple linear regression
+- Calculating param values - alpha and beta
+- Beta is a function of variance of x and covariance of x and y
+
+```
+var(x) = sum(1, n, i, (x_i - xbar)^2/(n-1))
+np.var(x, ddof=1) -> ddof is bessel's correction
+```
+
+- *Bessel's correction* that n-1 in formula for sample variance and sample mean
+- *covariance* is measure of how two variables change together, i.e. how linear they are.
+- if cov = 0, no linear relationship exists b/w vars. However vars may still not be independent (chi sq test)
+
+```
+cov(x,y) = sum(1, n, i, (x _i - xbar)(y _i - ybar)/(n-1))
+np.cov(x, y)[0][1] -> since covariance of x, y is located in matrix entry [0][1] or [1][0]
+```
+
+- then the formula for beta is:
+
+```
+Beta = cov(x,y)/var(x)
+```
+
+- now we can solve for alpha because we know the line must pass through xbar and ybar:
+
+```
+Alpha = ybar - beta*xbar
+```
+
+- 
