@@ -1,6 +1,7 @@
 ##Basic terms
-- Supervised - training set has right wrong to guide learning in the right direction
-- Unsupervised - do pattern finding/matching on training set 
+
+Supervised - training set has right wrong to guide learning in the right direction
+Unsupervised - do pattern finding/matching on training set 
 
 Response var - output
 Features - input vars
