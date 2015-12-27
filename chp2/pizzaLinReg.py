@@ -11,6 +11,8 @@ model = LinearRegression()
 model.fit(x, y)
 # print coefficient
 print model.coef_
+# print residual sum of squares
+print np.mean((model.predict(x) - y) ** 2)
 
 plt.figure()
 plt.title('Pizza vs Diameter')

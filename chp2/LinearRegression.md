@@ -12,6 +12,14 @@
 - alpha - y-int
 - beta - slope
 - sklearn.linear_model.LinearRegression class is an estimator
-- called method of least square cause minimizing sum of square of y-difference of points from line
+- called method of least square cause minimizing sum of square of y-difference of points from line (residuals)
 
-##Evaluating fitness with cost function
+##Evaluating fitness of model with cost function
+- *cost function* used to messure error in model
+- *residuals* difference in prediction by model and irl
+- *prediction errors* difference between predicted vals and observed vals
+- *residual sum of squares* should be minimized:
+  - aka mean of predict - y squared
+```
+SS _res = sum(1, n, i, (y _i - f(x _i))^2)
+```
