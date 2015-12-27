@@ -9,6 +9,8 @@ y = [[7], [9], [13], [17.5], [18]]
 # Create and fit model
 model = LinearRegression()
 model.fit(x, y)
+# print coefficient
+print model.coef_
 
 plt.figure()
 plt.title('Pizza vs Diameter')
@@ -16,7 +18,7 @@ plt.xlabel('Diameter in inches')
 plt.ylabel('Price in $')
 
 # make blue regression line
-plt.plot(x, model.predict(x))
+plt.plot(x, model.predict(x), color='red')
 # make black plot
 plt.plot(x, y, 'k.')
 plt.axis([0, 25, 0, 25])
