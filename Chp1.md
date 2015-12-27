@@ -1,13 +1,13 @@
 ##Basic terms
 
-Supervised - training set has right wrong to guide learning in the right direction
-Unsupervised - do pattern finding/matching on training set 
+Supervised - training set has right wrong to guide learning in the right direction <br>
+Unsupervised - do pattern finding/matching on training set  <br>
 
-Response var - output
-Features - input vars
-Explanatory vars - phenomena features measure
-training set - used to train program
-test set - used to test program
+Response var - output <br>
+Features - input vars <br>
+Explanatory vars - phenomena features measure <br>
+training set - used to train program <br>
+test set - used to test program <br>
 
 ##Machine Learning Tasks
 - Classification tasks - predict values for DISCRETE response vars using explanatory vars. (i.e. stock price go up or down)
