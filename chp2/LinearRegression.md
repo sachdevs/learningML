@@ -55,4 +55,38 @@ Beta = cov(x,y)/var(x)
 Alpha = ybar - beta*xbar
 ```
 
-- 
+##Evaluating the model
+- Evaluate using *rsquared*
+  - a score of 1 indicates all can be predicted with model. 1/2 indicates half the data can be predicted with model etc.
+- in simple linear regression, r-squared = square of pearson's r
+- SS_tot is total sum of squares:
+
+```
+SS_tot = sum(1,n,i, (yi - ybar)^2)
+then, R^2 is:
+
+R^2 = 1 - (SS _res)/(SS _tot)
+in sklearn:
+model.score(xtestvals, ytestvals)
+```
+
+##Multiple linear regression
+- For multiple linear:
+  - [Y1, Y2, ... Yn] = [alpha + beta*X1, alpha + betaX2,... alpha + betaXn] = [1 X1, ... 1 Xn]
+  - Or, Y = X*beta
+  - Where Y is a column vector of values of response vars
+  - Beta column vector values of model's params
+  - X is the "design matrix", *m* x *n* dimensional matrix
+    - m is number of training examples
+    - n is number of explanatory variables
+- Solving for beta - multiple by X^-1 on both sides to avoid matrix division
+- however X may not be sq, and only sq matrices are invertible.
+- therefore multiply x by x transpose to yield sq matrix
+- i.e. 
+
+```
+Beta = (X^T * X)^-1 * X^T * Y
+notice how X^T cancels out
+```
+
+##Polynomial regression
