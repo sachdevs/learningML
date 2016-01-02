@@ -40,7 +40,7 @@ plt.title('Pizza vs Diameter')
 plt.xlabel('Diameter in inches')
 plt.ylabel('Price in $')
 
-# make blue regression line
+# make red regression line
 plt.plot(a, model.predict(a), color='red')
 # make black plot
 plt.plot(x, y, 'k.')
